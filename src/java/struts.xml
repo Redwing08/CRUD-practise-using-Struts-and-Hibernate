@@ -1,0 +1,39 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+       <action name="*SaveAct" method ="add" class="action.PatientsAction">
+            <result name="success">Success.jsp</result>
+            <result name="error">ERROR.jsp</result>
+        </action>
+       <action name="Act" method ="getAllData" class="action.PatientsAction">
+            <result name="success">table.jsp</result>
+            <result name="error">ERROR.jsp</result>
+        </action>
+        
+        <action name="EditAct" method ="editData" class="action.PatientsAction">
+            <result name="success">index.jsp</result>
+            <result name="error">ERROR.jsp</result>
+        </action>
+        <action name="DeleteAct" method ="deleteData" class="action.PatientsAction">
+            <result name="success">table.jsp</result>
+            <result name="error">ERROR.jsp</result>
+        </action>  
+         <action name="getType" method ="typeData" class="action.PatientsAction">
+            <result name="success">table.jsp</result>
+            <result name="error">ERROR.jsp</result>
+        </action>        
+        
+        <!--
+          <action name="*SaveAct" method ="edit" class="action.PatientsAction">
+            <result name="success">index.jsp</result>
+            <result name="error">ERROR.jsp</result>
+        </action>-->
+        
+        
+        
+    </package>
+</struts>
